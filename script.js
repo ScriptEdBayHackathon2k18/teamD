@@ -124,9 +124,16 @@ function showDialogue(target, message, index, interval) {
         setTimeout(function () { showDialogue(target, message, index, interval); }, interval);
     }
 };
+var state;
 function draw(state) {
   $(".dialogue").empty();
   $(".choice").empty();
   $(".dialogue").text(dialogue[state][0]);
+  $(".choice").text(dialogue[state][1]);
+  //var choice1 = dialogue[state][];
 };
-draw(2);
+function choice(direct) {
+  var state = direct;
+  draw(state);
+}
+draw(0);
