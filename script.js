@@ -132,16 +132,23 @@ function showDialogue(target, message, index, interval) {
 var state;
 function draw(state) {
   $(".dialogue").empty();
-  $(".choice").empty();
+  $(".prompt").empty();
   $(".dialogue").text(dialogue[state][0]);
   var prompt = dialogue[state][1];
-  var choice1 = dialogue[state][2][0];
-  var choice2 = dialogue[state][2][1];
-  var choice3 = dialogue[state][2][2];
+  var choice1 = dialogue[state][2][0][0];
+  var choice2 = dialogue[state][2][1][0];
+  var choice3 = dialogue[state][2][2][0];
+  var direct1 = dialogue[state][2][0][1];
+  var direct2 = dialogue[state][2][1][1];
+  var direct3 = dialogue[state][2][2][1];
   if (prompt !== -1) {
     if (choice3 !== -1) {
-         
+      $("#choice3").text(choice3);
     }
+    $(".prompt").text(prompt);
+    $("#choice1").text(choice1);
+    $("#choice2").text(choice2);
+    $("#choice1").click(choice(direct1));  
   }
 };
 function choice(direct) {
