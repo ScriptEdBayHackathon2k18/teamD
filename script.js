@@ -144,11 +144,11 @@ function draw(state) {
   if (prompt !== -1) {
     if (choice3 !== -1) {
       $("#choice3").text(choice3);
+      $("#choice3").click(function(){choice(direct3)});
     }
     $(".prompt").text(prompt);
     $("#choice1").text(choice1);
     $("#choice2").text(choice2);
-    $("#choice1").click(choice(direct1));  
   }
 };
 function choice(direct) {

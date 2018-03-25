@@ -74,8 +74,17 @@ p{
 .choiceItem {
   font-size:20px;
   padding:20px;
+  transition-duration: 0.4s;
 }
-
+.choiceItem:hover {
+  color:black;
+    background-color: #CCFFFF; 
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,1), 0 6px 20px 0 rgba(0,0,0,30);
+}
+.choiceItem:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 #subject{
   zoom: 50%;
 }
