@@ -47,11 +47,18 @@ html{
     url("http://www.hpcf.upr.edu/~abel/phl/SER_Gliese667Cc_With_Stars.jpg");
   
 }
+a {
+ color:white;
+  font-size:30px;
+}
+p{
+  margin:0px;
+}
 
 .dialouge{
  border:inset white 2px;
   box-sizing: border-box;
-  height:49%;
+  height:50%;
   font-size:20px;
   margin:auto;
   padding:20px;

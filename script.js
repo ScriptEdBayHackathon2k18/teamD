@@ -30,6 +30,17 @@ var dialogue = [
     ],
   ],
   [
+    "You and the people on the spaceship decide to observe and research the aliens. After researching the activities and behaviors of the aliens, you want to drink a soda.",
+    "prompt",
+    [
+      ["Ask a rookie to get you a soda",0],
+      ["You get a soda for yourself",0],
+      ["choice3",0]
+    ],
+  ],
+  //stage3
+  //explore down heree
+  [
     "dialogue",
     "prompt",
     [
@@ -38,8 +49,43 @@ var dialogue = [
       ["choice3",0]
     ],
   ],
-  //stage3
-  
+  [
+    "dialogue",
+    "prompt",
+    [
+      ["choice1",0],
+      ["choice2",0],
+      ["choice3",0]
+    ],
+  ],
+  //this is 
+  [
+    "dialogue",
+    "prompt",
+    [
+      ["choice1",0],
+      ["choice2",0],
+      ["choice3",0]
+    ],
+  ],
+  [
+    "dialogue",
+    "prompt",
+    [
+      ["choice1",0],
+      ["choice2",0],
+      ["choice3",0]
+    ],
+  ],
+  [
+    "dialogue",
+    "prompt",
+    [
+      ["choice1",0],
+      ["choice2",0],
+      ["choice3",0]
+    ],
+  ],
 ];
 function draw(state) {
   
