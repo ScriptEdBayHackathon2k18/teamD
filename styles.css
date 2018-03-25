@@ -1,20 +1,33 @@
+body {
+ height:100%; 
+}
+
+
 h1 {
   color: fuchsia;
   font-size:40px;
 
 }
 
+
+
 #container1 {
   border:groove black 2px;
-  height:100px;
+  height:30px;
+
+
 }
 
 #container2 {
   border:groove black 2px;
-  height:200px;
+  height:500px;
+  margin-top:20px;
 }
 
 #container3 {
   border:groove black 2px;
-  height:150px;
+  height:125px;
+  margin-top:20px;
 }
+
+.c
