@@ -9,6 +9,10 @@ var dialogue = [
       ["Explore",2],
       ["Observe",3]
     ],
+    [
+    "https://cdn.pixabay.com/photo/2017/08/30/16/09/astronaut-2697654_960_720.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Gliese_667_Cc_sunset.jpg/1200px-Gliese_667_Cc_sunset.jpg"
+    ]
   ],
   //stage2
   //Retreat
@@ -20,6 +24,7 @@ var dialogue = [
       ["choice2",0],
       ["choice3",0]
     ],
+    ""
   ],
   //
   [
@@ -129,8 +134,15 @@ function draw(state) {
   $(".dialogue").empty();
   $(".choice").empty();
   $(".dialogue").text(dialogue[state][0]);
-  $(".choice").text(dialogue[state][1]);
-  //var choice1 = dialogue[state][];
+  var prompt = dialogue[state][1];
+  var choice1 = dialogue[state][2][0];
+  var choice2 = dialogue[state][2][1];
+  var choice3 = dialogue[state][2][2];
+  if (prompt !== -1) {
+    if (choice3 !== -1) {
+         
+    }
+  }
 };
 function choice(direct) {
   var state = direct;
