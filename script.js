@@ -10,9 +10,8 @@ var dialogue = [
       ["Observe",3]
     ],
     [
-    "",
-    "http://cdn.sci-news.com/images/2013/06/image_1174_2-gliese-667c.jpg
-"
+    "http://www.stickpng.com/assets/images/580b585b2edbce24c47b2d2c.png",
+    "http://www.hpcf.upr.edu/~abel/phl/SER_Gliese667Cc_With_Stars.jpg"
     ]
   ],
   //stage2
@@ -25,7 +24,10 @@ var dialogue = [
       ["choice2",0],
       ["choice3",0]
     ],
-    ""
+    [
+    "http://www.naingoo88.co.uk/2006/images/astronaut.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs_7KEcBBtD-5TmgvyiNm-XdVUM2dbJ_L0FGWJDXak10i36sOJ"
+    ]
   ],
   //
   [
@@ -36,6 +38,10 @@ var dialogue = [
       ["A lower plateau",5],
       [-1,0]
     ],
+    [
+    "http://www.naingoo88.co.uk/2006/images/astronaut.png",
+    "http://cdn.sci-news.com/images/2013/06/image_1174_2-gliese-667c.jpg"
+    ]
   ],
   [
     "You and the people on the spaceship decide to observe and research the aliens. After researching the activities and behaviors of the aliens, you want to drink a soda.",
@@ -45,6 +51,10 @@ var dialogue = [
       ["You get a soda for yourself",7],
       [-1,0]
     ],
+    [
+    "",
+    ""
+    ]
   ],
   //stage3
   //explore down heree
@@ -56,6 +66,10 @@ var dialogue = [
       ["Run away",9],
       [-1,0]
     ],
+    [
+    "http://www.naingoo88.co.uk/2006/images/astronaut.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Gliese_667_Cc_sunset.jpg/1200px-Gliese_667_Cc_sunset.jpg"
+    ]
   ],
   [
     "Your group decided to go inspect the lower plateau. In there you guys discovered some specimen that could cure cancer. All of you went back to the spaceship to study it further. Once you guys proved that it is indeed a cure for cancer, you went back to Earth and announce your discovery to the public. Your group were seen as heroes, and were given a lot of recognition. ",
@@ -65,6 +79,10 @@ var dialogue = [
       ["choice2",0],
       ["choice3",0]
     ],
+    [
+    "http://www.naingoo88.co.uk/2006/images/astronaut.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Gliese_667_Cc_sunset.jpg/1200px-Gliese_667_Cc_sunset.jpg"
+    ]
   ],
   //this is observe
   [
@@ -75,6 +93,10 @@ var dialogue = [
       ["choice2",0],
       ["choice3",0]
     ],
+    [
+    "",
+    ""
+    ]
   ],
   [
     "You decide to get the soda yourself to prevent the risk of something going wrong. Your thirst has been quenched you begin to research some more and realize that life forms on the planet is contacting you. You begin to communicate with the life forms on the planet. They invite you to land on their planet but you are skeptical. You and your men are deciding what to do.",
@@ -84,6 +106,10 @@ var dialogue = [
       ["Accept their offer",11],
       [-1,0]
     ],
+    [
+    "",
+    ""
+    ]
   ],
   //stage4
   [
@@ -94,6 +120,10 @@ var dialogue = [
       ["choice2",0],
       ["choice3",0]
     ],
+    [
+    "",
+    ""
+    ]
   ],
   [
     "The alien pointed a weapon at you and your group. All of you were forced to go with the creature, and when you reached the destination in which you guys are led to, the aliens killed you. The people on Earth found out what happened to your group and they wage a war against the aliens. The aliens lose the battle because the humans had time to prepare and plan their attack. ",
@@ -103,6 +133,10 @@ var dialogue = [
       ["choice2",0],
       ["choice3",0]
     ],
+    [
+    "https://cdn.pixabay.com/photo/2017/08/30/16/09/astronaut-2697654_960_720.png",
+    "http://cdn.sci-news.com/images/2013/06/image_1174_2-gliese-667c.jpg"
+    ]
   ],
   //observer brachen
   [
@@ -113,6 +147,10 @@ var dialogue = [
       ["choice2",0],
       ["choice3",0]
     ],
+    [
+    "",
+    ""
+    ]
   ],
   [
     "You accepted their offer and go to their territory. You go to their base, their structures was much like the buildings at home. The leader introduces himself and shows you around the planet. As the first outside living organism to find this planet the leader asks you if you would like to have an alliance with their planet. This was not an alliance deal where you can simply decline. If you decline the leader promises you, that if you do not ally with them, they will destroy all humans.So you allied with them. You and the aliens are safe and do not have tension with one another. Both living beings lives.",
@@ -122,6 +160,10 @@ var dialogue = [
       ["choice2",0],
       ["choice3",0]
     ],
+    [
+    "http://www.naingoo88.co.uk/2006/images/astronaut.png",
+    "http://cdn.sci-news.com/images/2013/06/image_1174_2-gliese-667c.jpg"
+    ]
   ],
 ];
 var isTypingDialogue = false;
@@ -129,7 +171,7 @@ var isTypingDialogue = false;
 function showDialogue(target, message, index, interval) {  
   isTypingDialogue = true;
     if (index === message.length) {
-      
+      isTypingDialogue = false;
     }
     if (index < message.length) {
         $(target).append(message[index++]);
@@ -153,9 +195,9 @@ function draw(state) {
   var direct2 = dialogue[state][2][1][1];
   var direct3 = dialogue[state][2][2][1];
   if (prompt !== -1) {
+    $("#choice3").hide();
     if (choice3 !== -1) {
-      $();
-      $("#choice").append(newChoice);
+      $("#choice3").show();
       $("#choice3").text(choice3);
       $("#choice3").click(function(){choice(direct3)});
     }
@@ -168,9 +210,16 @@ function draw(state) {
     $(".choice").empty();
     $(".choice").text("GAME OVER");
   }
+  
+  var newSubject = dialogue[state][3][1];
+  var newBackground = dialogue[state][3][2];
+  $("#subject").attr("src",newSubject);
+  $(".visual").css("background-image","url("+newBackground+")");
 };
 function choice(direct) {
   var state = direct;
-  draw(state);
+   if (isTypingDialogue === false){
+    draw(state);
+  }
 }
 draw(0);
