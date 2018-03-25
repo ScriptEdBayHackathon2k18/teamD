@@ -9,10 +9,6 @@ var dialogue = [
       ["Explore",2],
       ["Observe",3]
     ],
-    [
-    "http://www.stickpng.com/assets/images/580b585b2edbce24c47b2d2c.png",
-    "http://www.hpcf.upr.edu/~abel/phl/SER_Gliese667Cc_With_Stars.jpg"
-    ]
   ],
   //stage2
   //Retreat
@@ -25,8 +21,8 @@ var dialogue = [
       ["choice3",0]
     ],
     [
-    "http://www.naingoo88.co.uk/2006/images/astronaut.png",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs_7KEcBBtD-5TmgvyiNm-XdVUM2dbJ_L0FGWJDXak10i36sOJ"
+    "",
+    ""
     ]
   ],
   //
@@ -39,8 +35,8 @@ var dialogue = [
       [-1,0]
     ],
     [
-    "http://www.naingoo88.co.uk/2006/images/astronaut.png",
-    "http://cdn.sci-news.com/images/2013/06/image_1174_2-gliese-667c.jpg"
+    "",
+    ""
     ]
   ],
   [
@@ -67,8 +63,8 @@ var dialogue = [
       [-1,0]
     ],
     [
-    "http://www.naingoo88.co.uk/2006/images/astronaut.png",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Gliese_667_Cc_sunset.jpg/1200px-Gliese_667_Cc_sunset.jpg"
+    "",
+    ""
     ]
   ],
   [
@@ -80,8 +76,8 @@ var dialogue = [
       ["choice3",0]
     ],
     [
-    "http://www.naingoo88.co.uk/2006/images/astronaut.png",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Gliese_667_Cc_sunset.jpg/1200px-Gliese_667_Cc_sunset.jpg"
+    "",
+    ""
     ]
   ],
   //this is observe
@@ -134,8 +130,8 @@ var dialogue = [
       ["choice3",0]
     ],
     [
-    "https://cdn.pixabay.com/photo/2017/08/30/16/09/astronaut-2697654_960_720.png",
-    "http://cdn.sci-news.com/images/2013/06/image_1174_2-gliese-667c.jpg"
+    "",
+    ""
     ]
   ],
   //observer brachen
@@ -161,8 +157,8 @@ var dialogue = [
       ["choice3",0]
     ],
     [
-    "http://www.naingoo88.co.uk/2006/images/astronaut.png",
-    "http://cdn.sci-news.com/images/2013/06/image_1174_2-gliese-667c.jpg"
+    "",
+    ""
     ]
   ],
 ];
@@ -185,8 +181,8 @@ function draw(state) {
   $("#choice1").empty();
   $("#choice2").empty();
   $("#choice3").empty();
-  showDialogue(".dialogue",dialogue[state][0],0,10);
-  // $(".dialogue").text(dialogue[state][0]);
+  // showDialogue(".dialogue",dialogue[state][0],0,10);
+   $(".dialogue").text(dialogue[state][0]);
   var prompt = dialogue[state][1];
   var choice1 = dialogue[state][2][0][0];
   var choice2 = dialogue[state][2][1][0];
@@ -211,15 +207,15 @@ function draw(state) {
     $(".choice").text("GAME OVER");
   }
   
-  var newSubject = dialogue[state][3][1];
-  var newBackground = dialogue[state][3][2];
-  $("#subject").attr("src",newSubject);
-  $(".visual").css("background-image","url("+newBackground+")");
+//   var newSubject = dialogue[state][3][1];
+//   var newBackground = dialogue[state][3][2];
+//   $("#subject").attr("src",newSubject);
+//   $(".visual").css("background-image","url("+newBackground+")");
 };
 function choice(direct) {
   var state = direct;
-   if (isTypingDialogue === false){
+   // if (isTypingDialogue === false){
     draw(state);
-  }
+  // }
 }
 draw(0);
