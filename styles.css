@@ -32,25 +32,22 @@ html{
 
 .stats{
   border:inset white 2px;
-  margin-right:10px;
+  margin-right:1%;
   height:100%;
-  width:20%;
+  width:19%;
   box-sizing: border-box;
 }
 .visual{
   border:inset white 2px;
   box-sizing: border-box;
   height:100%;
-  width:79.2%;
+  width:80%;
   background-repeat: no-repeat; 
   background-image: 
     url("http://www.hpcf.upr.edu/~abel/phl/SER_Gliese667Cc_With_Stars.jpg");
   
 }
-a {
- color:white;
-  font-size:30px;
-}
+
 p{
   margin:0px;
 }
@@ -71,12 +68,7 @@ p{
   height:49%;
 }
 
-.c11{
-  background-color:red;
-  height:50%;
-  padding:auto;
 
-}
 
 
 #spaceship{
