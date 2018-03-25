@@ -14,7 +14,7 @@ h1 {
 #container1 {
   border:groove black 2px;
   height:30px;
-
+background-color:green;
 
 }
 
@@ -22,12 +22,27 @@ h1 {
   border:groove black 2px;
   height:500px;
   margin-top:20px;
+  background-color:yellow;
+  display:flex;
+  flex-wrap:wrap;
 }
 
 #container3 {
   border:groove black 2px;
   height:125px;
   margin-top:20px;
+  background-color:pink;
 }
 
-.c
+.c21{
+  background-color:red;
+  margin:auto;
+  height:90%;
+  width:20%;
+}
+.c22{
+  background-color:blue;
+  margin:auto;
+  height:90%;
+  width:65%;
+}
