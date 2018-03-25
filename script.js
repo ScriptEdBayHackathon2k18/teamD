@@ -9,6 +9,11 @@ var dialogue = [
       ["Explore",2],
       ["Observe",3]
     ],
+    [
+    "",
+    "http://cdn.sci-news.com/images/2013/06/image_1174_2-gliese-667c.jpg
+"
+    ]
   ],
   //stage2
   //Retreat
@@ -27,8 +32,8 @@ var dialogue = [
     "The people of the spaceship agree with you. They decide to dock the ship on a mountain of the planet. When you and your buddies get off the ship with data-sampling tools, they start collecting information. After taking enough information of the surrounding area, the group is told to explore a different area.",
     "The group sees two areas that stand out:",
     [
-      ["A valley",5],
-      ["A lower plateau",6],
+      ["A valley",4],
+      ["A lower plateau",5],
       [-1,0]
     ],
   ],
@@ -36,8 +41,8 @@ var dialogue = [
     "You and the people on the spaceship decide to observe and research the aliens. After researching the activities and behaviors of the aliens, you want to drink a soda.",
     "You make a decision:",
     [
-      ["Ask a rookie to get you a soda",7],
-      ["You get a soda for yourself",8],
+      ["Ask a rookie to get you a soda",6],
+      ["You get a soda for yourself",7],
       [-1,0]
     ],
   ],
@@ -47,8 +52,8 @@ var dialogue = [
     "The group packs up the many samples they have collected and start moving downwards. Along the way, you catch a glimpse of one of the creatures. This creature slowly approaches your group. It tries to speak to you in a foreign language.",
     "The Artemis team wants to back off, what do you do?:",
     [
-      ["Confront the alien",9],
-      ["Run away",10],
+      ["Confront the alien",8],
+      ["Run away",9],
       [-1,0]
     ],
   ],
@@ -75,8 +80,8 @@ var dialogue = [
     "You decide to get the soda yourself to prevent the risk of something going wrong. Your thirst has been quenched you begin to research some more and realize that life forms on the planet is contacting you. You begin to communicate with the life forms on the planet. They invite you to land on their planet but you are skeptical. You and your men are deciding what to do.",
     "You can choose:",
     [
-      ["Decline their offer ",11],
-      ["Accept their offer",12],
+      ["Decline their offer ",10],
+      ["Accept their offer",11],
       [-1,0]
     ],
   ],
@@ -119,7 +124,13 @@ var dialogue = [
     ],
   ],
 ];
-function showDialogue(target, message, index, interval) {   
+var isTypingDialogue = false;
+
+function showDialogue(target, message, index, interval) {  
+  isTypingDialogue = true;
+    if (index === message.length) {
+      
+    }
     if (index < message.length) {
         $(target).append(message[index++]);
         setTimeout(function () { showDialogue(target, message, index, interval); }, interval);
@@ -132,7 +143,8 @@ function draw(state) {
   $("#choice1").empty();
   $("#choice2").empty();
   $("#choice3").empty();
-  $(".dialogue").text(dialogue[state][0]);
+  showDialogue(".dialogue",dialogue[state][0],0,10);
+  // $(".dialogue").text(dialogue[state][0]);
   var prompt = dialogue[state][1];
   var choice1 = dialogue[state][2][0][0];
   var choice2 = dialogue[state][2][1][0];
@@ -142,6 +154,8 @@ function draw(state) {
   var direct3 = dialogue[state][2][2][1];
   if (prompt !== -1) {
     if (choice3 !== -1) {
+      $();
+      $("#choice").append(newChoice);
       $("#choice3").text(choice3);
       $("#choice3").click(function(){choice(direct3)});
     }
@@ -152,7 +166,7 @@ function draw(state) {
     $("#choice2").click(function(){choice(direct2)});
   } else {
     $(".choice").empty();
-    $(".choice").text("GAME OVER. SPIEL");
+    $(".choice").text("GAME OVER");
   }
 };
 function choice(direct) {
