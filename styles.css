@@ -4,16 +4,6 @@ body {
 html{
   height:100%;
 }
-
-
-h1 {
-  color: fuchsia;
-  font-size:40px;
-
-}
-
-
-
 #container1 {
   border:groove black 2px;
   height:3%;
