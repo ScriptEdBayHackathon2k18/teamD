@@ -48,7 +48,10 @@ h1 {
   box-sizing: border-box;
   height:100%;
   width:79.2%;
-  background-
+  background-size: cover;
+  background-image: 
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgQ2NepYLoKJCLNdlon2x8EIn05d38O0DvDDfZXPCpI_u38wzGeA");
+  
 }
 
 .c31{
@@ -64,4 +67,15 @@ h1 {
   height:49%;
 }
 
-css+
+.c11{
+  background-color:red;
+  height:50%;
+  padding:auto;
+
+}
+
+.c111{
+  background-color:blue;
+  height:50%;
+  margin:auto;
+}
