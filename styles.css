@@ -1,3 +1,20 @@
 h1 {
   color: fuchsia;
+  font-size:40px;
+
+}
+
+#container1 {
+  border:groove black 2px;
+  height:100px;
+}
+
+#container2 {
+  border:groove black 2px;
+  height:200px;
+}
+
+#container3 {
+  border:groove black 2px;
+  height:150px;
 }
