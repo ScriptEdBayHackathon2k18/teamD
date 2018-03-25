@@ -74,8 +74,8 @@ var dialogue = [
     "You decide to get the soda yourself to prevent the risk of something going wrong. Your thirst has been quenched you begin to research some more and realize that life forms on the planet is contacting you. You begin to communicate with the life forms on the planet. They invite you to land on their planet but you are skeptical. You and your men are deciding what to do.",
     "prompt",
     [
-      ["Decline their offer ",0],
-      ["Accept their offer",0],
+      ["Decline their offer ",11],
+      ["Accept their offer",12],
       [-1,0]
     ],
   ],
@@ -118,7 +118,15 @@ var dialogue = [
     ],
   ],
 ];
+function showDialogue(target, message, index, interval) {   
+    if (index < message.length) {
+        $(target).append(message[index++]);
+        setTimeout(function () { showDialogue(target, message, index, interval); }, interval);
+    }
+};
 function draw(state) {
   $(".dialogue").empty();
-  $("").empty();
+  $(".choice").empty();
+  $(".dialogue").text(dialogue[state][0]);
 };
+draw(2);

@@ -30,7 +30,7 @@ html{
 
 }
 
-.stats{
+.history{
   border:inset white 2px;
   margin-right:1%;
   height:100%;
@@ -55,17 +55,17 @@ p{
 .dialouge{
  border:inset white 2px;
   box-sizing: border-box;
-  height:50%;
+  min-height:50%;
   font-size:20px;
   margin:auto;
   padding:20px;
 }
 
 .choice{
-  margin-top:5px;
+  margin-top:10px;
  border:inset white 2px;
   box-sizing: border-box;
-  height:49%;
+  min-height:49%;
 }
 
 
