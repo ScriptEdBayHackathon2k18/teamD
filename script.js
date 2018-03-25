@@ -1,2 +1,15 @@
-console.log('hi');
+var progress = 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
