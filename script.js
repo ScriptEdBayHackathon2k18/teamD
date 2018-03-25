@@ -9,10 +9,6 @@ var dialogue = [
       ["Explore",2],
       ["Observe",3]
     ],
-    [
-    "https://cdn.pixabay.com/photo/2017/08/30/16/09/astronaut-2697654_960_720.png",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Gliese_667_Cc_sunset.jpg/1200px-Gliese_667_Cc_sunset.jpg"
-    ]
   ],
   //stage2
   //Retreat
@@ -38,7 +34,7 @@ var dialogue = [
   ],
   [
     "You and the people on the spaceship decide to observe and research the aliens. After researching the activities and behaviors of the aliens, you want to drink a soda.",
-    "prompt",
+    "You make a decision:",
     [
       ["Ask a rookie to get you a soda",7],
       ["You get a soda for yourself",8],
@@ -49,7 +45,7 @@ var dialogue = [
   //explore down heree
   [
     "The group packs up the many samples they have collected and start moving downwards. Along the way, you catch a glimpse of one of the creatures. This creature slowly approaches your group. It tries to speak to you in a foreign language.",
-    "prompt",
+    "The Artemis team wants to back off, what do you do?:",
     [
       ["Confront the alien",9],
       ["Run away",10],
@@ -77,7 +73,7 @@ var dialogue = [
   ],
   [
     "You decide to get the soda yourself to prevent the risk of something going wrong. Your thirst has been quenched you begin to research some more and realize that life forms on the planet is contacting you. You begin to communicate with the life forms on the planet. They invite you to land on their planet but you are skeptical. You and your men are deciding what to do.",
-    "prompt",
+    "You can choose:",
     [
       ["Decline their offer ",11],
       ["Accept their offer",12],
@@ -133,6 +129,9 @@ var state;
 function draw(state) {
   $(".dialogue").empty();
   $(".prompt").empty();
+  $("#choice1").empty();
+  $("#choice2").empty();
+  $("#choice3").empty();
   $(".dialogue").text(dialogue[state][0]);
   var prompt = dialogue[state][1];
   var choice1 = dialogue[state][2][0][0];
@@ -148,7 +147,12 @@ function draw(state) {
     }
     $(".prompt").text(prompt);
     $("#choice1").text(choice1);
+    $("#choice1").click(function(){choice(direct1)});
     $("#choice2").text(choice2);
+    $("#choice2").click(function(){choice(direct2)});
+  } else {
+    $(".choice").empty();
+    $(".choice").text("GAME OVER. SPIEL");
   }
 };
 function choice(direct) {
