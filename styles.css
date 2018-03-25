@@ -48,7 +48,7 @@ h1 {
   box-sizing: border-box;
   height:100%;
   width:79.2%;
-
+  background-repeat: no-repeat; 
   background-image: 
     url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNTrnWCXP1qI5czl4hirwh2b49HGTXWdPNRnT-ivHdNYT-50lS");
   
