@@ -1,17 +1,21 @@
 body {
- height:100%;
+  height:100%;
+  background-color: black;
+  color: white;
+  font-family: Poppins;
 }
 html{
   height:100%;
 }
-#container1 {
-  border:groove black 2px;
+
+#progressBar {
+  border: white 2px;
   height:3%;
   margin-bottom:10px;
 
 }
 
-#container2 {
+#centre {
   
   height:57%;
  
@@ -21,20 +25,20 @@ html{
   margin-bottom:10px;
 }
 
-#container3 {
+#text {
   height:40%;
 
 }
 
-.c21{
-  border:groove black 2px;
+.stats{
+  border:inset white 2px;
   margin-right:10px;
   height:100%;
   width:20%;
   box-sizing: border-box;
 }
-.c22{
-  border:groove black 2px;
+.visual{
+  border:inset white 2px;
   box-sizing: border-box;
   height:100%;
   width:79.2%;
@@ -44,15 +48,18 @@ html{
   
 }
 
-.c31{
- border:groove black 2px;
+.dialouge{
+ border:inset white 2px;
   box-sizing: border-box;
   height:49%;
+  font-size:20px;
+  margin:auto;
+  padding:20px;
 }
 
-.c32{
+.choice{
   margin-top:5px;
- border:groove black 2px;
+ border:inset white 2px;
   box-sizing: border-box;
   height:49%;
 }
@@ -64,11 +71,6 @@ html{
 
 }
 
-.c111{
-  background-color:blue;
-  height:50%;
-  margin:auto;
-}
 
 #spaceship{
   zoom: 50%;
