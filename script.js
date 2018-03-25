@@ -1,8 +1,6 @@
 var progress = 0;
-var text = [
-  "",
-];
-function draw(state) {
+var text = [];
+function draw(state,choice) {
   
 };
 
